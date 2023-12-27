@@ -10,4 +10,4 @@
             <light:NavigationItem Content="Network" />
     </light:NavigationPanel>
 ```
-- More info: [Github](http://github.com/JamesBaiJun)
+- More info: [Github](https://github.com/JamesBaiJun/LightControl)
