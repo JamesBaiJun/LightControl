@@ -4,12 +4,14 @@
     <UseWPF>true</UseWPF>
 	<PackageTags>Simple WPF C# Control</PackageTags>
 	<PackageId>LightControl</PackageId>
-	<AssemblyVersion>1.0.0.2</AssemblyVersion>
+	<AssemblyVersion>1.0.1.0</AssemblyVersion>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
 	<PackageReadmeFile>README.md</PackageReadmeFile>
 	<Description>simple and beautiful used WPF controls</Description>
 	<PackageProjectUrl>https://github.com/JamesBaiJun/LightControl</PackageProjectUrl>
 	<Title>LightControl</Title>
+	<FileVersion>1.0.1.0</FileVersion>
+	<Version>1.0.1</Version>
   </PropertyGroup>
 
   <Import Project="..\LightControl_Shared\LightControl_Shared.projitems" Label="Shared" />

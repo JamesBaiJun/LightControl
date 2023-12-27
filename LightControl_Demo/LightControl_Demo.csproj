@@ -9,6 +9,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevExpressMvvm" Version="22.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\LightControl\LightControl.csproj" />
   </ItemGroup>
 
