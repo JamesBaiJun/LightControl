@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>netcoreapp3.0;netcoreapp3.1;net45;net451;net452;net46;net461;net462;net47;net471;net472;net48;net6.0-windows;net7.0-windows;</TargetFrameworks>
+    <UseWPF>true</UseWPF>
+	<PackageTags>Simple WPF C# Control</PackageTags>
+	<PackageId>LightControl</PackageId>
+	<AssemblyVersion>1.0.0.2</AssemblyVersion>
+	<PackageLicenseExpression>MIT</PackageLicenseExpression>
+	<PackageReadmeFile>README.md</PackageReadmeFile>
+	<Description>simple and beautiful used WPF controls</Description>
+	<PackageProjectUrl>http://github.com/JamesBaiJun</PackageProjectUrl>
+	<Title>LightControl</Title>
+  </PropertyGroup>
+
+  <Import Project="..\LightControl_Shared\LightControl_Shared.projitems" Label="Shared" />
+
+  <ItemGroup>
+    <Compile Update="Properties\Settings.Designer.cs">
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+	<None Include=".\docs\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

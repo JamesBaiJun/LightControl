@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34309.116
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightControl", "LightControl\LightControl.csproj", "{ECCEA74E-81B0-4D8C-A49B-8E849C3AE589}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "LightControl_Shared", "LightControl_Shared\LightControl_Shared.shproj", "{8D99AA16-D413-4D38-BC37-761B78B13A85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LightControl_Demo", "LightControl_Demo\LightControl_Demo.csproj", "{0C0BE541-34B2-4D25-9060-42B89693AC00}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ECCEA74E-81B0-4D8C-A49B-8E849C3AE589}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECCEA74E-81B0-4D8C-A49B-8E849C3AE589}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECCEA74E-81B0-4D8C-A49B-8E849C3AE589}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECCEA74E-81B0-4D8C-A49B-8E849C3AE589}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0BE541-34B2-4D25-9060-42B89693AC00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0BE541-34B2-4D25-9060-42B89693AC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0BE541-34B2-4D25-9060-42B89693AC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0BE541-34B2-4D25-9060-42B89693AC00}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27ED6AA3-EB4F-4521-9906-AA35940490D8}
+	EndGlobalSection
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		LightControl_Shared\LightControl_Shared.projitems*{8d99aa16-d413-4d38-bc37-761b78b13a85}*SharedItemsImports = 13
+		LightControl_Shared\LightControl_Shared.projitems*{eccea74e-81b0-4d8c-a49b-8e849c3ae589}*SharedItemsImports = 5
+	EndGlobalSection
+EndGlobal
