@@ -7,30 +7,33 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:NavigationPanel}">
-                    <Border HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-                            VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}"
-                            CornerRadius="24">
+                    <Border
+                        HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                        VerticalAlignment="{TemplateBinding VerticalAlignment}"
+                        Background="{TemplateBinding Background}"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        CornerRadius="24">
                         <Border.Effect>
-                            <DropShadowEffect BlurRadius="12"
-                                              Direction="-90"
-                                              Opacity=".2"
-                                              ShadowDepth="6"
-                                              Color="#565656" />
+                            <DropShadowEffect
+                                BlurRadius="12"
+                                Direction="-90"
+                                Opacity=".2"
+                                ShadowDepth="6"
+                                Color="#565656" />
                         </Border.Effect>
                         <Grid VerticalAlignment="Center">
                             <Grid Margin="6,0">
-                                <Rectangle x:Name="PreviewRect"
-                                           Width="76"
-                                           Height="32"
-                                           HorizontalAlignment="Left"
-                                           Fill="{TemplateBinding Foreground}"
-                                           Opacity="0.6"
-                                           RadiusX="16"
-                                           RadiusY="16"
-                                           RenderTransformOrigin="0.5,0.5" />
+                                <Rectangle
+                                    x:Name="PreviewRect"
+                                    Width="76"
+                                    Height="32"
+                                    HorizontalAlignment="Left"
+                                    Fill="{TemplateBinding Foreground}"
+                                    Opacity="0.6"
+                                    RadiusX="16"
+                                    RadiusY="16"
+                                    RenderTransformOrigin="0.5,0.5" />
                             </Grid>
                             <StackPanel x:Name="PART_Panel" Orientation="Horizontal" />
                         </Grid>
@@ -49,17 +52,15 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type local:NavigationItem}">
-                    <Border Padding="4"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
+                    <Border Padding="4" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}">
                         <Grid Width="76" Height="32">
-                            <Rectangle x:Name="SelectRect"
-                                       Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:NavigationPanel}}"
-                                       Opacity="0"
-                                       RadiusX="16"
-                                       RadiusY="16"
-                                       RenderTransformOrigin="0.5,0.5" />
+                            <Rectangle
+                                x:Name="SelectRect"
+                                Fill="{Binding Foreground, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=local:NavigationPanel}}"
+                                Opacity="0"
+                                RadiusX="16"
+                                RadiusY="16"
+                                RenderTransformOrigin="0.5,0.5" />
                             <StackPanel Margin="0,6" HorizontalAlignment="Center" VerticalAlignment="Center">
                                 <ContentControl Margin="4,0" HorizontalAlignment="Center" Content="{TemplateBinding Header}" />
                                 <ContentControl Margin="4,2,4,0" HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
@@ -72,21 +73,19 @@
                             <Trigger.EnterActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="SelectRect"
-                                                         Storyboard.TargetProperty="Opacity"
-                                                         From="0"
-                                                         To="1"
-                                                         Duration="0:0:0.25" />
+                                        <DoubleAnimation
+                                            Storyboard.TargetName="SelectRect"
+                                            Storyboard.TargetProperty="Opacity"
+                                            From="0"
+                                            To="1"
+                                            Duration="0:0:0.25" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.EnterActions>
                             <Trigger.ExitActions>
                                 <BeginStoryboard>
                                     <Storyboard>
-                                        <DoubleAnimation Storyboard.TargetName="SelectRect"
-                                                         Storyboard.TargetProperty="Opacity"
-                                                         To="0"
-                                                         Duration="0:0:0.35" />
+                                        <DoubleAnimation Storyboard.TargetName="SelectRect" Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.35" />
                                     </Storyboard>
                                 </BeginStoryboard>
                             </Trigger.ExitActions>
@@ -96,4 +95,43 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="{x:Type local:KnobButton}">
+        <Setter Property="Background" Value="#0068F4" />
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="local:KnobButton">
+                    <Grid x:Name="bdGrid" Width="{Binding RelativeSource={RelativeSource Self}, Path=ActualHeight}">
+                        <Grid Margin="16" RenderTransformOrigin="0.5,0.5">
+                            <Grid.RenderTransform>
+                                <RotateTransform x:Name="rotatevalue" Angle="00" />
+                            </Grid.RenderTransform>
+
+                            <Ellipse Margin="4" Fill="#FFF6F6F6" Stroke="White">
+                                <Ellipse.Effect>
+                                    <DropShadowEffect BlurRadius="8" Direction="-90" ShadowDepth="2" Color="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=Background.(SolidColorBrush.Color)}" />
+                                </Ellipse.Effect>
+                            </Ellipse>
+                            <Ellipse
+                                Width="8"
+                                Height="8"
+                                Margin="12"
+                                VerticalAlignment="Bottom"
+                                Fill="{TemplateBinding Background}" />
+                        </Grid>
+                        <TextBlock
+                            HorizontalAlignment="Center"
+                            VerticalAlignment="Center"
+                            FontSize="{TemplateBinding FontSize}"
+                            Foreground="{TemplateBinding Foreground}"
+                            Text="{Binding Value, RelativeSource={RelativeSource Mode=TemplatedParent}, StringFormat={}{0:F2}}" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
 </ResourceDictionary>

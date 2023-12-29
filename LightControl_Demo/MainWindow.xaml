@@ -1,16 +1,17 @@
-﻿<Window x:Class="LightControl_Demo.MainWindow"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-        xmlns:light="http://github.com/JamesBaiJun/controls"
-        xmlns:local="clr-namespace:LightControl_Demo"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        Title="MainWindow"
-        Width="800"
-        Height="450"
-        DataContext="{dxmvvm:ViewModelSource Type=local:MainViewModel}"
-        mc:Ignorable="d">
+﻿<Window
+    x:Class="LightControl_Demo.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:light="http://github.com/JamesBaiJun/controls"
+    xmlns:local="clr-namespace:LightControl_Demo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="800"
+    Height="450"
+    DataContext="{dxmvvm:ViewModelSource Type=local:MainViewModel}"
+    mc:Ignorable="d">
     <Grid SnapsToDevicePixels="True" UseLayoutRounding="True">
         <Grid.Background>
             <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
@@ -18,16 +19,17 @@
                 <GradientStop Offset="1" Color="#FF5FCFFF" />
             </LinearGradientBrush>
         </Grid.Background>
-        <light:NavigationPanel FontFamily="Arial" Foreground="HotPink">
-            <light:NavigationItem Command="{Binding TestCommand}"
-                                  CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}"
-                                  Content="Home"
-                                  IsSelected="True" />
-            <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Tool" />
-            <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Setting" />
-            <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Feather" />
-            <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Network" />
-        </light:NavigationPanel>
 
+        <StackPanel VerticalAlignment="Center">
+            <light:KnobButton Width="200" Height="200" Margin="12" />
+            <light:NavigationPanel FontFamily="Arial" Foreground="HotPink">
+                <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Home" IsSelected="True" />
+                <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Tool" />
+                <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Setting" />
+                <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Feather" />
+                <light:NavigationItem Command="{Binding TestCommand}" CommandParameter="{Binding Content, RelativeSource={RelativeSource Self}}" Content="Network" />
+            </light:NavigationPanel>
+
+        </StackPanel>
     </Grid>
 </Window>

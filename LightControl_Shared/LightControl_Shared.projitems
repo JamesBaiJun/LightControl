@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\KnobButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\NavigationItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\NavigationPanel.cs" />
   </ItemGroup>
