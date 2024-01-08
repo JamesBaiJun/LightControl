@@ -9,6 +9,10 @@
     <Import_RootNamespace>LightControl_Shared</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
+    <Page Include="$(MSBuildThisFileDirectory)Controls\FlyoutNotification.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="$(MSBuildThisFileDirectory)Themes\Generic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -16,6 +20,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="$(MSBuildThisFileDirectory)AssemblyInfo.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Controls\FlyoutNotification.xaml.cs">
+      <DependentUpon>FlyoutNotification.xaml</DependentUpon>
+    </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Controls\KnobButton.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\NavigationItem.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Controls\NavigationPanel.cs" />

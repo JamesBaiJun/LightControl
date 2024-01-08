@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using LightControl.Controls;
 
 namespace LightControl_Demo
 {
@@ -13,7 +14,7 @@ namespace LightControl_Demo
     {
         public void Test(object content)
         {
-            Debug.WriteLine(content.ToString());
+            FlyoutNotification.ShowNotication(content.ToString(), "标题");
         }
     }
 }
